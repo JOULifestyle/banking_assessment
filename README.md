@@ -46,7 +46,7 @@ A fully functional banking dashboard application with comprehensive transaction 
 - **RESTful API** - Proper HTTP methods and status codes
 - **Input Validation** - Server-side validation with detailed errors
 
-## 🚀 **Quick Start**
+##  **Quick Start**
 
 ### **Prerequisites**
 - Node.js (v16 or higher)
@@ -88,10 +88,10 @@ npm run dev
 ```
 
 ### **Access the Application**
-- **🏦 Banking Dashboard**: http://localhost:5173
-- **🔌 API Documentation**: http://localhost:3001
+- ** Banking Dashboard**: http://localhost:5173
+- ** API Documentation**: http://localhost:3001
 
-## 📡 **API Endpoints**
+##  **API Endpoints**
 
 ### **Account Management**
 ```
@@ -143,7 +143,7 @@ GET /api/accounts/1/transactions?page=1&limit=10
 }
 ```
 
-## 🧪 **Testing Guide**
+##  **Testing Guide**
 
 ### **Automated Testing with Postman**
 
@@ -289,7 +289,7 @@ This implementation demonstrates:
 6. **Testing Strategy** - Postman collection and manual testing scenarios
 7. **Production Readiness** - Input validation, error recovery, and responsive UI
 
-## 🚀 **Ready for Demo**
+## **Ready for Demo**
 
 Your banking dashboard is now **production-ready** with:
 -  Complete transaction management system
