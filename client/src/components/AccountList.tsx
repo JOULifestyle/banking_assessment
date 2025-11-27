@@ -201,7 +201,12 @@ export function AccountList() {
   };
 
   // Basic loading and error states - Consider implementing skeleton loading and error boundaries
-  if (loading) return <div>Loading...</div>;
+  if (loading) return (
+    <div className={styles.loading}>
+      <div className={styles.spinner}></div>
+      <span className={styles.loadingText}>Loading accounts...</span>
+    </div>
+  );
   if (error) return <div>Error: {error}</div>;
 
   // Basic render logic - Consider implementing:
@@ -284,7 +289,10 @@ export function AccountList() {
           )}
 
           {transactionLoading ? (
-            <div>Loading transactions...</div>
+            <div className={styles.loading}>
+              <div className={styles.spinner}></div>
+              <span className={styles.loadingText}>Loading transactions...</span>
+            </div>
           ) : transactionError ? (
             <div>Error: {transactionError}</div>
           ) : transactions ? (

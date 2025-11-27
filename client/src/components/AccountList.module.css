@@ -1,5 +1,10 @@
 .container {
   padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .grid {
@@ -7,6 +12,103 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .transactionSection {
+    padding: 1rem;
+  }
+
+  .transactionForm {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .transactionForm select,
+  .transactionForm input,
+  .transactionForm button {
+    width: 100%;
+  }
+
+  .transactionTable {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+  }
+
+  .transactionTable table {
+    font-size: 0.875rem;
+    min-width: 400px;
+    width: 100%;
+    max-width: none;
+  }
+
+  .transactionTable th,
+  .transactionTable td {
+    padding: 0.5rem;
+    white-space: nowrap;
+  }
+
+  /* Hide less important columns on very small screens */
+  @media (max-width: 480px) {
+    .transactionTable th:nth-child(4),
+    .transactionTable td:nth-child(4) {
+      display: none;
+    }
+  }
+
+  .pagination {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  .pagination button {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    min-width: 80px;
+  }
+
+  .successMessage {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0.5rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .transactionSection {
+    padding: 1rem;
+    overflow-x: hidden;
+  }
+
+  .filters {
+    padding: 0.75rem;
+  }
 }
 
 .card {
@@ -45,6 +147,8 @@
   padding: 1.5rem;
   background: #f8f9fa;
   border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .transactionSection button {
@@ -123,6 +227,34 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+/* Loading Indicators */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 2rem;
+  color: #666;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loadingText {
+  font-size: 0.875rem;
 }
 
 .error {
