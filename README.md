@@ -249,7 +249,6 @@ POST http://localhost:3001/api/accounts/999/transactions
 -  **Success messages** for completed transactions
 -  **Error messages** for failed operations
 -  **Loading spinners** during API calls
--  **Responsive layout** on all screen sizes
 
 ##  **Project Structure**
 
