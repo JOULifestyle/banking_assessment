@@ -30,7 +30,7 @@ A fully functional banking dashboard application with comprehensive transaction 
 -  **Input Validation** - Server and client-side validation
 -  **Error Recovery** - Graceful error handling throughout
 
-## 🛠 **Technical Stack**
+##  **Technical Stack**
 
 ### **Frontend**
 - **React 18** - Modern component-based UI framework
